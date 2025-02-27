@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./bootstrap.min.css"/>
+    <title>Document</title>
+    <style>
+        html, body {
+          background-color: #7277b1;
+          color: #e4e7f3;
+        }
+
+
+
+        .grid {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer"
+        "seEvol seEvol";
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 70px auto 250px; /* Reduzindo a altura do header */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    height: 100%;
+    padding-top: 30px;
+}
+
+        .grid > div {
+          background-color:  #7277b1;
+          padding: 10px;
+        }
+
+        .grid > div.header {
+    grid-area: header;
+    text-align: center;
+           }
+
+        .grid > div.content {
+          grid-area: content;
+          overflow: auto; 
+          justify-content: space-between;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .grid > div.footer {
+          grid-area: footer;
+        }
+
+        .grid > div.seEvol {
+          grid-area: seEvol;
+        }
+
+        .footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+        .project {
+    width: 190px; 
+    height: 120px; 
+    background: #7277b1; 
+    border-radius: 24px; 
+    box-shadow: 
+        12px 12px 45px #5e63a3, 
+        -4px -4px 40px #9da3d9e0; 
+        padding: 24px;
+    border: 0.5px solid #7174a7ef;
+    
+}  
+
+.seProject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap; 
+}
+
+.menu img{
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.seContato 
+img{
+    border-radius: 50%;
+}
+
+.sePerfil {
+    display: block;
+
+}
+
+.seContact {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: 12px;
+    }
+
+    .seContato {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .seContato img {
+       margin: 0px;
+       padding: 2px;
+    }
+
+    .seContato {
+    font-size: 12px; /* Ajuste conforme necessário */
+}
+
+.seTitulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.seDesempenho {
+    background-color: #5e63a3;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+.seEvol {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 10px; 
+}
+
+.desemp {
+    background-color: #5e63a3; /* Apenas para visualização */
+    padding: 10px;
+}
+
+.opcContact {
+    background-color: #5e63a3;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.desemp {
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+    </style>
+</head>
+<body>    
+<div class="container">
+        <div class="grid">
+        <div class="header"><h2>Erika Zanin</h2></div>
+        <div class="content">
+            <div class="opcContact">
+                <h1 href="#">Contato</h1>
+                    <div class="seContact">
+                        <div class="seContato">
+                            <img src="https://placehold.co/16x16/EEE/31343C" alt="">Telefone: (99) 9 9999-9999
+                            <img src="https://placehold.co/16x16/EEE/31343C" alt="">Email: Erikaczbu@gmail.com
+                        </div>
+                        <div class="seContato">
+                            <img src="https://placehold.co/16x16/EEE/31343C" alt="">Telefone: (99) 9 9999-9999
+                            <img src="https://placehold.co/16x16/EEE/31343C" alt="">Email: Erikaczbu@gmail.com
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="menu">
+            <div class="sePerfil">
+                <img src="https://placehold.co/150x150/EEE/31343C" alt="">
+                <div class="seContact">
+                </div>
+            </div>
+            <h3>Sobre mim</h3>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p></div>
+        <div class="footer">
+            <div class="seTitulo">
+                <h4>Projetos</h4>
+
+            </div>
+            <div class="seProject">
+            <div class="project">
+                Projeto 1
+            </div>
+            <div class="project">
+                Projeto 2
+            </div>
+            <div class="project">
+                Projeto 3
+            </div>
+            <div class="project">
+                Projeto 4
+            </div>
+            <div class="project">
+                Projeto 5
+            </div>
+        </div>
+        </div>
+        <div class="seEvol">
+        <div class="desemp">
+            <div class="dadDesempenho">
+                <h1 href="#">Hard Skills</h1>
+                <div class="opHard">
+                    <div class="opL">
+                        <ol>
+                            <li>Teste1</li>
+                            <li>Teste2</li>
+                        </ol>
+                    </div>
+                    <div class="opE">
+                        <ol>
+                            <li>Teste1</li>
+                            <li>Teste2</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="dadDesempenho">
+                <h1 href="#">Hard Skills</h1>
+                <div class="opHard">
+                    <div class="opL">
+                        <ol>
+                            <li>Teste1</li>
+                            <li>Teste2</li>
+                        </ol>
+                    </div>
+                    <div class="opE">
+                        <ol>
+                            <li>Teste1</li>
+                            <li>Teste2</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="dadDesempenho">
+                <h1 href="#">Hard Skills</h1>
+                <div class="opHard">
+                    <div class="opL">
+                        <ol>
+                            <li>Teste1</li>
+                            <li>Teste2</li>
+                        </ol>
+                    </div>
+                    <div class="opE">
+                        <ol>
+                            <li>Teste1</li>
+                            <li>Teste2</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="evol">
+            teste
+       </div>
+        </div>
+    </div>
+      </div>
+    <script src="./bootstrap.bundle.min.js"></script>
+</body>
+</html>
