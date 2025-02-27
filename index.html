@@ -154,7 +154,7 @@ img{
 
 .desemp {
     background-color: #5e63a3; /* Apenas para visualização */
-    padding: 10px;
+    padding: 18px;
 }
 
 .opcContact {
@@ -172,6 +172,49 @@ img{
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
 }
+
+.evol {
+    display: grid;
+    grid-template-columns: 45% 10% 45%; 
+    gap: 10px; 
+}
+
+.evol div {
+    text-align: center;
+    color: white;
+}
+
+
+
+.opHard {
+    display: flex;
+    justify-content: space-around; 
+}
+
+
+.dadDesempenho {
+    padding-bottom: 30px;
+}
+
+.barra {
+    border-radius: 80px;
+    background-color: #5e63a3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 0 20px;
+    align-items: center;
+}
+
+.bola {
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0px;
+}
+
+
 
     </style>
 </head>
@@ -280,7 +323,19 @@ img{
             </div>
         </div>
         <div class="evol">
-            teste
+            <div>
+                Teste
+            </div>
+            <div class="barra">
+                <div class="bola"></div>
+                <div class="bola"></div>
+                <div class="bola"></div>
+                <div class="bola"></div>
+                <div class="bola"></div>
+            </div>
+            <div>
+                Teste
+            </div>
        </div>
         </div>
     </div>
