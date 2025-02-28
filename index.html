@@ -131,7 +131,7 @@ img{
     left: 0;
     width: 100%;
     text-align: left;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
 .seDesempenho {
@@ -155,6 +155,7 @@ img{
 .desemp {
     background-color: #5e63a3; /* Apenas para visualização */
     padding: 18px;
+    height: 500px;
 }
 
 .opcContact {
@@ -175,7 +176,7 @@ img{
 
 .evol {
     display: grid;
-    grid-template-columns: 45% 10% 45%; 
+    grid-template-columns: 48% 4% 48%; 
     gap: 10px; 
 }
 
@@ -197,21 +198,79 @@ img{
 }
 
 .barra {
-    border-radius: 80px;
-    background-color: #5e63a3;
+    position: absolute;
+    top: 0; 
+    left: 50%;  
+    transform: translateX(-50%); /* Ajuste aqui */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    padding: 0 20px;
+    justify-content: space-around;
+    height: 100%; 
+    width: 4px;
+    background-color: #5e63a3;
+    border-radius: 120px;
     align-items: center;
 }
 
 .bola {
-    width: 14px;
-    height: 14px;
-    background-color: white;
+    width: 20px;
+    height: 20px;
+    background-color: #313350;
     border-radius: 50%;
-    padding: 0px;
+}
+
+.cEvol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 150px;
+}
+
+.cEvold {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.cardEvol {
+    border: 2px solid black;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;  /* Ajuste conforme necessário */
+    margin: auto;
+    padding-top: 50px; /* Ajuste o espaço no topo */
+}
+
+.timeline-item {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px; /* Espaçamento entre os itens */
+}
+
+.timeline-item .content {
+    background: #5e63a3;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 
+        12px 12px 45px #5e63a3
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: left;
+}
+
+.timeline-item.right {
+    left: 50%;
+    margin-left: 30px;
+    text-align: left;
 }
 
 
@@ -239,7 +298,7 @@ img{
         </div>
         <div class="menu">
             <div class="sePerfil">
-                <img src="https://placehold.co/150x150/EEE/31343C" alt="">
+                <img src="https://placehold.co/200x200/EEE/31343C" alt="">
                 <div class="seContact">
                 </div>
             </div>
@@ -322,9 +381,40 @@ img{
                 </div>
             </div>
         </div>
-        <div class="evol">
-            <div>
-                Teste
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="content">
+                    <h3>A Origem</h3>
+                    <p>O primeiro relato do surgimento do Design foi durante a Revolução Industrial, na Inglaterra.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="content">
+                    <h3>A Bauhaus</h3>
+                    <p>1919: surgimento da primeira escola de Design do Mundo, a Bauhaus.</p>
+                </div>
+            </div>
+        
+            <div class="timeline-item left">
+                <div class="content">
+                    <h3>Design Pós-Moderno</h3>
+                    <p>Década de 60: novas preocupações e projetos focados na funcionalidade das peças de arte.</p>
+                </div>
+            </div>
+        
+            <div class="timeline-item right">
+                <div class="content">
+                    <h3>Anos 70 e 80</h3>
+                    <p>Surgimento dos primeiros programas de edição eletrônica.</p>
+                </div>
+            </div>
+        
+            <div class="timeline-item left">
+                <div class="content">
+                    <h3>A era do Digital</h3>
+                    <p>Atualmente, o avanço tecnológico permite maior liberdade na criação de produtos e serviços.</p>
+                </div>
             </div>
             <div class="barra">
                 <div class="bola"></div>
@@ -332,11 +422,8 @@ img{
                 <div class="bola"></div>
                 <div class="bola"></div>
                 <div class="bola"></div>
-            </div>
-            <div>
-                Teste
-            </div>
-       </div>
+            </div> 
+        </div> 
         </div>
     </div>
       </div>
