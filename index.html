@@ -152,12 +152,6 @@ img{
     gap: 10px; 
 }
 
-.desemp {
-    background-color: #5e63a3; /* Apenas para visualização */
-    padding: 18px;
-    height: 500px;
-}
-
 .opcContact {
     background-color: #5e63a3;
     border-top-left-radius: 80px;
@@ -172,6 +166,12 @@ img{
 .desemp {
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
+    background-color: #5e63a3; /* Apenas para visualização */
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 18px;
+    height: 500px;
+    width: 350px;
 }
 
 .evol {
@@ -195,6 +195,7 @@ img{
 
 .dadDesempenho {
     padding-bottom: 30px;
+    width: 80%;
 }
 
 .barra {
@@ -204,7 +205,6 @@ img{
     transform: translateX(-50%); /* Ajuste aqui */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     height: 100%; 
     width: 4px;
     background-color: #5e63a3;
@@ -217,6 +217,7 @@ img{
     height: 20px;
     background-color: #313350;
     border-radius: 50%;
+    display: none;
 }
 
 .cEvol {
@@ -241,7 +242,6 @@ img{
 .timeline {
     position: relative;
     max-width: 900px;  /* Ajuste conforme necessário */
-    margin: auto;
     padding-top: 50px; /* Ajuste o espaço no topo */
 }
 
@@ -272,6 +272,36 @@ img{
     margin-left: 30px;
     text-align: left;
 }
+
+.card1,
+.card2, 
+.card3,
+.card4,
+.card5 {
+    display: none;
+}
+
+#card1 {
+    margin-top: 100px;
+}
+
+#card2 {
+    margin-top: 220px;
+}
+
+#card3 {
+    margin-top: 220px;
+}
+
+#card4 {
+    margin-top: 260px;
+}
+
+#card5 {
+    margin-top: 180px;
+}
+
+
 
 
 
@@ -383,50 +413,51 @@ img{
         </div>
         <div class="timeline">
             <div class="timeline-item left">
-                <div class="content">
+                <div class="content card1">
                     <h3>A Origem</h3>
                     <p>O primeiro relato do surgimento do Design foi durante a Revolução Industrial, na Inglaterra.</p>
                 </div>
             </div>
             
             <div class="timeline-item right">
-                <div class="content">
+                <div class="content card2">
                     <h3>A Bauhaus</h3>
                     <p>1919: surgimento da primeira escola de Design do Mundo, a Bauhaus.</p>
                 </div>
             </div>
         
             <div class="timeline-item left">
-                <div class="content">
+                <div class="content card3">
                     <h3>Design Pós-Moderno</h3>
                     <p>Década de 60: novas preocupações e projetos focados na funcionalidade das peças de arte.</p>
                 </div>
             </div>
         
             <div class="timeline-item right">
-                <div class="content">
+                <div class="content card4">
                     <h3>Anos 70 e 80</h3>
                     <p>Surgimento dos primeiros programas de edição eletrônica.</p>
                 </div>
             </div>
         
             <div class="timeline-item left">
-                <div class="content">
+                <div class="content card5">
                     <h3>A era do Digital</h3>
                     <p>Atualmente, o avanço tecnológico permite maior liberdade na criação de produtos e serviços.</p>
                 </div>
             </div>
             <div class="barra">
-                <div class="bola"></div>
-                <div class="bola"></div>
-                <div class="bola"></div>
-                <div class="bola"></div>
-                <div class="bola"></div>
+                    <div class="bola" id="card1"></div>
+                    <div class="bola" id="card2"></div>
+                    <div class="bola" id="card3"></div>
+                    <div class="bola" id="card4"></div>
+                    <div class="bola" id="card5"></div>
             </div> 
         </div> 
         </div>
     </div>
       </div>
     <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
