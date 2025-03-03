@@ -18,17 +18,17 @@
     grid-template-areas:
         "header header"
         "menu content"
+        "seDesemp seDesemp"
         "footer footer"
         "seEvol seEvol";
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 70px auto 250px; /* Reduzindo a altura do header */
+    grid-template-rows: 70px auto 250px; 
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
     height: 100%;
     padding-top: 30px;
 }
-
         .grid > div {
           background-color:  #7277b1;
           padding: 10px;
@@ -37,6 +37,13 @@
         .grid > div.header {
     grid-area: header;
     text-align: center;
+           }
+
+           .grid > div.seDesemp {
+    grid-area: seDesemp;
+    text-align: center;
+    width: 100%;
+    height: auto;
            }
 
         .grid > div.content {
@@ -89,7 +96,7 @@
 }
 
 .menu img{
-    border-radius: 50%;
+    border-radius: 20%;
     padding: 12px;
 }
 
@@ -142,14 +149,6 @@ img{
     padding-right: 28px;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-
-
-.seEvol {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 10px; 
 }
 
 .opcContact {
@@ -241,8 +240,7 @@ img{
 
 .timeline {
     position: relative;
-    max-width: 900px;  /* Ajuste conforme necessário */
-    padding-top: 50px; /* Ajuste o espaço no topo */
+    padding: 80px; 
 }
 
 .timeline-item {
@@ -250,8 +248,9 @@ img{
     width: 45%;
     padding: 20px;
     box-sizing: border-box;
-    margin-bottom: 30px; /* Espaçamento entre os itens */
+    margin-bottom: 30px; 
 }
+
 
 .timeline-item .content {
     background: #5e63a3;
@@ -259,7 +258,7 @@ img{
     border-radius: 10px;
     position: relative;
     box-shadow: 
-        12px 12px 45px #5e63a3
+        12px 12px 45px #5e63a3;
 }
 
 .timeline-item.left {
@@ -301,10 +300,6 @@ img{
     margin-top: 180px;
 }
 
-
-
-
-
     </style>
 </head>
 <body>    
@@ -332,12 +327,68 @@ img{
                 <div class="seContact">
                 </div>
             </div>
+            <img src="https://placehold.co/250x250/EEE/31343C" alt="">
             <h3>Sobre mim</h3>
-            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p></div>
-        <div class="footer">
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p>
+        </div>
+        <div class="seDesemp">
+            <div class="opcDesemp">
+                <div class="dadDesempenho">
+                    <h1 href="#">Hard Skills</h1>
+                    <div class="opHard">
+                        <div class="opL">
+                            <ol>
+                                <li>Teste1</li>
+                                <li>Teste2</li>
+                            </ol>
+                        </div>
+                        <div class="opE">
+                            <ol>
+                                <li>Teste1</li>
+                                <li>Teste2</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="dadDesempenho">
+                    <h1 href="#">Hard Skills</h1>
+                    <div class="opHard">
+                        <div class="opL">
+                            <ol>
+                                <li>Teste1</li>
+                                <li>Teste2</li>
+                            </ol>
+                        </div>
+                        <div class="opE">
+                            <ol>
+                                <li>Teste1</li>
+                                <li>Teste2</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="dadDesempenho">
+                    <h1 href="#">Hard Skills</h1>
+                    <div class="opHard">
+                        <div class="opL">
+                            <ol>
+                                <li>Teste1</li>
+                                <li>Teste2</li>
+                            </ol>
+                        </div>
+                        <div class="opE">
+                            <ol>
+                                <li>Teste1</li>
+                                <li>Teste2</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+             <div class="footer">
             <div class="seTitulo">
                 <h4>Projetos</h4>
-
             </div>
             <div class="seProject">
             <div class="project">
@@ -358,59 +409,6 @@ img{
         </div>
         </div>
         <div class="seEvol">
-        <div class="desemp">
-            <div class="dadDesempenho">
-                <h1 href="#">Hard Skills</h1>
-                <div class="opHard">
-                    <div class="opL">
-                        <ol>
-                            <li>Teste1</li>
-                            <li>Teste2</li>
-                        </ol>
-                    </div>
-                    <div class="opE">
-                        <ol>
-                            <li>Teste1</li>
-                            <li>Teste2</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-            <div class="dadDesempenho">
-                <h1 href="#">Hard Skills</h1>
-                <div class="opHard">
-                    <div class="opL">
-                        <ol>
-                            <li>Teste1</li>
-                            <li>Teste2</li>
-                        </ol>
-                    </div>
-                    <div class="opE">
-                        <ol>
-                            <li>Teste1</li>
-                            <li>Teste2</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-            <div class="dadDesempenho">
-                <h1 href="#">Hard Skills</h1>
-                <div class="opHard">
-                    <div class="opL">
-                        <ol>
-                            <li>Teste1</li>
-                            <li>Teste2</li>
-                        </ol>
-                    </div>
-                    <div class="opE">
-                        <ol>
-                            <li>Teste1</li>
-                            <li>Teste2</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="timeline">
             <div class="timeline-item left">
                 <div class="content card1">

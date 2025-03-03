@@ -1,24 +1,25 @@
-setTimeout(function(){
-    document.querySelector('.card1').style.display = 'block';
-    document.querySelector('#card1').style.display = 'block';
-}, 1000);
+window.addEventListener('scroll', function() {
+    // Verifica a posição do scroll na página
+    let scrollPosition = window.scrollY + window.innerHeight;
 
-setTimeout(function(){
-    document.querySelector('.card2').style.display = 'block';
-    document.querySelector('#card2').style.display = 'block';
-}, 2000);
+    // Função para mostrar o card com atraso
+    function showCard(card, delay) {
+        if (card && card.offsetTop < scrollPosition) {
+            setTimeout(function() {
+                card.style.display = 'block';
+            }, delay);
+        }
+    }
 
-setTimeout(function(){
-    document.querySelector('.card3').style.display = 'block';
-    document.querySelector('#card3').style.display = 'block';
-}, 3000);
-
-setTimeout(function(){
-    document.querySelector('.card4').style.display = 'block';
-    document.querySelector('#card4').style.display = 'block';
-}, 4000);
-
-setTimeout(function(){
-    document.querySelector('.card5').style.display = 'block';
-    document.querySelector('#card5').style.display = 'block';
-}, 5000);
+    // Cards com atraso
+    showCard(document.querySelector('.card1'), 500);
+    showCard(document.querySelector('#card1'), 500);
+    showCard(document.querySelector('.card2'), 1000); 
+    showCard(document.querySelector('#card2'), 1000); 
+    showCard(document.querySelector('.card3'), 1500); 
+    showCard(document.querySelector('#card3'), 1500);
+    showCard(document.querySelector('.card4'), 2000);
+    showCard(document.querySelector('#card4'), 2000);
+    showCard(document.querySelector('.card5'), 2500);
+    showCard(document.querySelector('#card5'), 2500);
+});
