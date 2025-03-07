@@ -11,6 +11,10 @@
           color: #e4e7f3;
         }
 
+        ol {
+    list-style: none;
+}
+
 
 
         .grid {
@@ -22,41 +26,72 @@
         "footer footer"
         "seEvol seEvol";
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 70px auto 250px; 
-    padding-left: 50px;
-    padding-right: 50px;
+    grid-template-rows: 90px auto auto; 
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 50px;
     height: 100%;
-    padding-top: 30px;
+    padding-top: 20px;
 }
         .grid > div {
           background-color:  #7277b1;
           padding: 10px;
         }
 
+        .menu {
+            margin-top: 24px;
+        }
+
         .grid > div.header {
     grid-area: header;
-    text-align: center;
-           }
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #5e63a3;
+    border-radius: 16px;
+    padding: 0px 80px 0px 24px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.grid > div.header .opcMenu {
+    margin-left: auto; 
+}
+
+
+    .opcMenu li{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .opcMenu ol{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
 
            .grid > div.seDesemp {
     grid-area: seDesemp;
-    text-align: center;
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 24px 0px;
            }
 
         .grid > div.content {
           grid-area: content;
-          overflow: auto; 
-          justify-content: space-between;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          padding-top: 25%;
         }
 
         .grid > div.footer {
           grid-area: footer;
+          min-height: 300px;
         }
 
         .grid > div.seEvol {
@@ -162,6 +197,8 @@ img{
 }
 
 
+
+
 .desemp {
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
@@ -195,6 +232,11 @@ img{
 .dadDesempenho {
     padding-bottom: 30px;
     width: 80%;
+    border: 0.5px solid rgba(255, 255, 255, 0.259);
+}
+
+.dadDesempenho h1 {
+    text-align: center;
 }
 
 .barra {
@@ -249,7 +291,15 @@ img{
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 30px; 
+    animation: mymove 5s forwards;
+    opacity: 0;
 }
+
+@keyframes mymove {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 
 
 .timeline-item .content {
@@ -281,31 +331,68 @@ img{
 }
 
 #card1 {
-    margin-top: 100px;
+    margin-top: 140px;
 }
 
 #card2 {
-    margin-top: 220px;
+    margin-top: 180px;
 }
 
 #card3 {
-    margin-top: 220px;
+    margin-top: 180px;
 }
 
 #card4 {
-    margin-top: 260px;
+    margin-top: 200px;
 }
 
 #card5 {
     margin-top: 180px;
 }
 
+.opcDesemp {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+    gap: 16px;
+}
+
+.dadEscolar {
+     min-width: 400px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.dadEscolar h1 {
+    font-size: 26px
+}
+
+.textEscolar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
     </style>
 </head>
 <body>    
 <div class="container">
         <div class="grid">
-        <div class="header"><h2>Erika Zanin</h2></div>
+        <div class="header">
+            <h1>Erika Zanin</h1>
+            <div class="opcMenu">
+                <li>
+                    <ol>Inicio</ol>
+                    <ol>Desempenho</ol>
+                    <ol>Projetos</ol>
+                    <ol>Contato</ol>
+                </li>
+            </div>
+        </div>
         <div class="content">
             <div class="opcContact">
                 <h1 href="#">Contato</h1>
@@ -322,67 +409,34 @@ img{
         </div>
         </div>
         <div class="menu">
-            <div class="sePerfil">
-                <img src="https://placehold.co/200x200/EEE/31343C" alt="">
-                <div class="seContact">
-                </div>
-            </div>
             <img src="https://placehold.co/250x250/EEE/31343C" alt="">
             <h3>Sobre mim</h3>
             <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p>
         </div>
         <div class="seDesemp">
+            <div class="dadEscolar">
+                <div class="textEscolar">
+                <h1 href="#">Educação e reconhecimento</h1>
+                <ol>
+                    <li>Teste teste</li>
+                    <li>Teste</li>
+                </ol>
+            </div>
+            </div>
             <div class="opcDesemp">
                 <div class="dadDesempenho">
                     <h1 href="#">Hard Skills</h1>
-                    <div class="opHard">
-                        <div class="opL">
-                            <ol>
-                                <li>Teste1</li>
-                                <li>Teste2</li>
-                            </ol>
-                        </div>
-                        <div class="opE">
-                            <ol>
-                                <li>Teste1</li>
-                                <li>Teste2</li>
-                            </ol>
-                        </div>
-                    </div>
+                    <ol>
+                        <li>Teste teste</li>
+                        <li>Teste</li>
+                    </ol>
                 </div>
                 <div class="dadDesempenho">
-                    <h1 href="#">Hard Skills</h1>
-                    <div class="opHard">
-                        <div class="opL">
-                            <ol>
-                                <li>Teste1</li>
-                                <li>Teste2</li>
-                            </ol>
-                        </div>
-                        <div class="opE">
-                            <ol>
-                                <li>Teste1</li>
-                                <li>Teste2</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="dadDesempenho">
-                    <h1 href="#">Hard Skills</h1>
-                    <div class="opHard">
-                        <div class="opL">
-                            <ol>
-                                <li>Teste1</li>
-                                <li>Teste2</li>
-                            </ol>
-                        </div>
-                        <div class="opE">
-                            <ol>
-                                <li>Teste1</li>
-                                <li>Teste2</li>
-                            </ol>
-                        </div>
-                    </div>
+                    <h1 href="#">Soft Skills</h1>
+                    <ol>
+                        <li>Teste teste</li>
+                        <li>Teste</li>
+                    </ol>
                 </div>
             </div>
             </div>
