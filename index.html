@@ -24,7 +24,8 @@
         "menu content"
         "seDesemp seDesemp"
         "footer footer"
-        "seEvol seEvol";
+        "seEvol seEvol"
+        "footerContact footerContact";
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 90px auto auto; 
     padding-left: 30px;
@@ -33,16 +34,8 @@
     height: 100%;
     padding-top: 20px;
 }
-        .grid > div {
-          background-color:  #7277b1;
-          padding: 10px;
-        }
 
-        .menu {
-            margin-top: 24px;
-        }
-
-        .grid > div.header {
+.grid > div.header {
     grid-area: header;
     display: flex;
     justify-content: space-between; 
@@ -52,30 +45,27 @@
     padding: 0px 80px 0px 24px;
 }
 
-.header h1 {
-    font-size: 24px;
-}
+        .grid > div.footer {
+          grid-area: footer;
+          min-height: 300px;
+        }
 
-.grid > div.header .opcMenu {
-    margin-left: auto; 
-}
+        .grid > div.seEvol {
+          grid-area: seEvol;
+        }
 
+        .grid > div.footerContact {
+          grid-area: footerContact;
+          background-color: white;
+          color: black;
+          min-height: 200px;
+          display: flex;
+          justify-content: space-between;
+          border-radius: 8px;
+          margin-top: 40px;
+        }
 
-    .opcMenu li{
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        gap: 32px;
-    }
-
-    .opcMenu ol{
-        padding: 0px;
-        margin: 0px;
-        text-align: center;
-    }
-
-           .grid > div.seDesemp {
+        .grid > div.seDesemp {
     grid-area: seDesemp;
     width: 100%;
     height: auto;
@@ -86,17 +76,47 @@
 
         .grid > div.content {
           grid-area: content;
-          padding-top: 25%;
+          padding-top: 18%;
         }
 
-        .grid > div.footer {
-          grid-area: footer;
-          min-height: 300px;
+        .grid > div {
+          background-color:  #7277b1;
+          padding: 10px;
         }
 
-        .grid > div.seEvol {
-          grid-area: seEvol;
+        .menu {
+            margin-top: 24px;
         }
+
+.header h1 {
+    font-size: 24px;
+}
+
+.grid > div.header .opcMenu {
+    margin-left: auto; 
+}
+
+nav a {
+        color: #e4e7f3;
+        text-decoration: none;
+    }
+
+
+
+    .opcMenu li{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+   
+    .opcMenu ol{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        margin: 20px;
+    }
 
         .footer {
     grid-area: footer;
@@ -133,7 +153,10 @@
 .menu img{
     border-radius: 20%;
     padding: 12px;
+    margin-bottom: 28px;
 }
+
+
 
 .seContato 
 img{
@@ -192,17 +215,18 @@ img{
     border-bottom-left-radius: 80px;
     padding-left: 28px;
     padding-right: 28px;
-    padding-top: 10px;
     padding-bottom: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-
-
 
 .desemp {
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
-    background-color: #5e63a3; /* Apenas para visualização */
+    background-color: #5e63a3; 
     padding-top: 18px;
     padding-bottom: 18px;
     padding-left: 18px;
@@ -327,7 +351,7 @@ img{
 .card3,
 .card4,
 .card5 {
-    display: none;
+    display: block;
 }
 
 #card1 {
@@ -376,6 +400,72 @@ img{
     height: 100%;
 }
 
+.footerRedes {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    height: 100%; 
+    margin-right: 70px;
+}
+
+.footerNome {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    flex-direction: column;
+    height: 100%; 
+    margin-left: 20px;
+}
+
+ol {
+    margin: 0px;
+    padding: 0px;
+}
+
+.footerRedes ol {
+    display: flex;
+}
+
+.footerRedes li {
+    min-height: 40px;
+    min-width: 85px;
+}
+
+#Linkedin:hover {
+    color: rgb(4, 4, 230);
+    font-size: 18px;
+}
+
+#github:hover {
+    color: purple;
+    font-size: 18px;
+}
+
+
+#vercel:hover {
+    color: brown;
+    font-size: 18px;
+}
+
+#email:hover {
+    color: rgb(214, 8, 8);
+    font-size: 18px;
+}
+
+#wppcont:hover {
+    color: green;
+    font-size: 18px;
+}
+
+#inicio,
+#desempenho,
+#projetos,
+#contato {
+    transition: transform 0.3s ease;
+}
+
 
     </style>
 </head>
@@ -384,14 +474,14 @@ img{
         <div class="grid">
         <div class="header">
             <h1>Erika Zanin</h1>
-            <div class="opcMenu">
+            <nav class="opcMenu">
                 <li>
-                    <ol>Inicio</ol>
-                    <ol>Desempenho</ol>
-                    <ol>Projetos</ol>
-                    <ol>Contato</ol>
+                    <ol id="inicio"><a href="Inicio">Inicio</a></ol>
+                    <ol id="desempenho"><a href="desempenho">Desempenho</a></ol>
+                    <ol id="projetos"><a href="projetos">Projetos</a></ol>
+                    <ol id="contato"><a href="contato">Contato</a></ol>
                 </li>
-            </div>
+        </nav>
         </div>
         <div class="content">
             <div class="opcContact">
@@ -506,6 +596,21 @@ img{
                     <div class="bola" id="card5"></div>
             </div> 
         </div> 
+        </div>
+        <div class="footerContact">
+                   <div class="footerNome">
+                    <h1>Erika Carolina Zanin</h1>
+                    <p>Movida ao sucesso, e determina em desafios</p>
+                   </div>
+                   <div class="footerRedes">
+                    <ol>
+                        <li id="Linkedin">Linkedin</li>
+                        <li id="github">GitHub</li>
+                        <li id="vercel">Vercel</li>
+                        <li id="email">E-mail</li>
+                        <li id="wppcont">WhatsApp</li>
+                    </ol>
+                   </div>
         </div>
     </div>
       </div>
