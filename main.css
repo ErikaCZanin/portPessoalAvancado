@@ -1,0 +1,576 @@
+/*Geral*/
+
+html,
+body {
+    background-color: #7277b1;
+    color: white;
+}
+
+ol {
+    list-style: none;
+}
+
+.grid>div {
+    background-color: #7277b1;
+    padding: 10px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        /*navegacao*/
+        "header header"
+        /*introducao perfil*/
+        "sobre content"
+        /*Historico formação*/
+        "seDesemp seDesemp"
+        /*Projetos*/
+        "footer footer"
+        /*Historico curricular*/
+        "seEvol seEvol"
+        "footerContact footerContact";
+    /*Contato*/
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 70px auto auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    height: 100%;
+    padding-top: 40px;
+}
+
+/*navegacao*/
+.grid>div.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 16px;
+    padding: 0px 80px 0px 24px;
+    color: black;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.grid>div.header .opcMenu {
+    margin-left: auto;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: brown;
+}
+
+
+.opcMenu li {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.opcMenu ol {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*introducao perfil*/
+
+.sobre {
+    margin-top: 24px;
+}
+
+.textSobre {
+    opacity: 0; /* Começa invisível */
+    transform: translateX(100px); /* Começa deslocada para a direita */
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+.sobre img {
+    border-radius: 20%;
+    padding: 12px;
+    margin-bottom: 28px;
+}
+
+.seContato img {
+    border-radius: 50%;
+}
+
+.sePerfil {
+    display: block;
+
+}
+
+.seContact {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 12px;
+}
+
+.seContato {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.seContato img {
+    margin: 0px;
+    padding: 2px;
+}
+
+.seContato {
+    font-size: 12px;
+    /* Ajuste conforme necessário */
+}
+
+.opcContact {
+    background-color: #5e63a3;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.animated-image {
+    opacity: 0;
+    transform: translateX(-100px); /* Começa fora da tela à esquerda */
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100px); /* Vindo da esquerda */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.opcContact {
+    opacity: 0;
+    transform: translateX(100px); /* Começa fora da tela à direita */
+    animation: contatin 1s ease-out forwards;
+}
+
+@keyframes contatin {
+    from {
+        opacity: 0;
+        transform: translateX(100px); /* Vindo da esquerda */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/*Historico formação*/
+.grid>div.seDesemp {
+    grid-area: seDesemp;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 24px 0px;
+}
+
+
+.desemp {
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    background-color: #5e63a3;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 18px;
+    height: 500px;
+    width: 350px;
+}
+
+
+
+.dadDesempenho {
+    padding-bottom: 30px;
+    width: 80%;
+    border: 0.5px solid rgba(255, 255, 255, 0.259);
+}
+
+.dadEscolar, .opcDesemp {
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease-out, transform 1.5s ease-out;
+}
+
+.dadEscolar {
+    transform: translateX(-100px); 
+}
+
+.opcDesemp {
+    transform: translateX(100px); 
+}
+
+.dadEscolar.visible {
+    opacity: 1;
+    transform: translateX(0); 
+    display: block;
+}
+
+.opcDesemp.visible {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
+
+.dadDesempenho h1 {
+    text-align: center;
+}
+
+.opcDesemp {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+    gap: 16px;
+}
+
+.dadEscolar {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dadEscolar h1 {
+    font-size: 26px
+}
+
+.textEscolar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 8px;
+}
+
+.desempCert {
+    width: 100%;
+    background-color: #a7a8b7;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.desempCert h1 {
+    font-size: 168x;
+}
+
+.desempCert h2 {
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.desempCert h3 {
+    font-size: 12px;
+}
+
+.desempCert p {
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bowlProgress {
+    background-color: aqua;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.Progress {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+/*Projetos*/
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+.project {
+    width: 190px;
+    height: 120px;
+    background: #7277b1;
+    border-radius: 24px;
+    box-shadow:
+        12px 12px 45px #5e63a3,
+        -4px -4px 40px #9da3d9e0;
+    padding: 24px;
+    border: 0.5px solid #7174a7ef;
+
+}
+
+.seProject {
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Suaviza a transição */
+}
+
+.seProject.visible {
+    animation: contatin 1s ease-out forwards; /* Adiciona a animação quando a classe .visible for aplicada */
+    animation-delay: 0.5s; /* Atraso de 0.5 segundos */
+}
+
+
+.seProject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+.seTitulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding: 10px 10px;
+}
+
+
+.grid>div.footer {
+    grid-area: footer;
+    min-height: 300px;
+}
+
+/*Historico curricular*/
+.barra {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Ajuste aqui */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 4px;
+    background-color: #5e63a3;
+    border-radius: 120px;
+    align-items: center;
+}
+
+.bola {
+    width: 20px;
+    height: 20px;
+    background-color: #313350;
+    border-radius: 50%;
+    display: none;
+}
+
+.timeline {
+    position: relative;
+    padding: 80px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.grid>div.seEvol {
+    grid-area: seEvol;
+}
+
+.timeline-item .content {
+    background: #5e63a3;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow:
+        12px 12px 45px #5e63a3;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: left;
+}
+
+.timeline-item.right {
+    left: 50%;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+#card1,
+#card2,
+#card3,
+#card4,
+#card5 {
+    animation: mymove 5s forwards;
+    opacity: 0;
+}
+
+#card1 {
+    margin-top: 140px;
+}
+
+#card2 {
+    margin-top: 180px;
+}
+
+#card3 {
+    margin-top: 180px;
+}
+
+#card4 {
+    margin-top: 200px;
+}
+
+#card5 {
+    margin-top: 180px;
+}
+
+.evol {
+    display: grid;
+    grid-template-columns: 48% 4% 48%;
+    gap: 10px;
+}
+
+.evol div {
+    text-align: center;
+}
+
+.grid>div.content {
+    grid-area: content;
+    padding-top: 18%;
+}
+
+/*Contato*/
+
+
+.grid>div.footerContact {
+    grid-area: footerContact;
+    background-color: white;
+    color: black;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+
+
+.footerRedes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    margin-right: 70px;
+}
+
+.footerNome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 20px;
+}
+
+ol {
+    margin: 0px;
+    padding: 0px;
+}
+
+.footerRedes ol {
+    display: flex;
+}
+
+.footerRedes li {
+    min-height: 40px;
+    min-width: 85px;
+}
+
+#Linkedin:hover {
+    color: rgb(4, 4, 230);
+    font-size: 18px;
+}
+
+#github:hover {
+    color: purple;
+    font-size: 18px;
+}
+
+
+#vercel:hover {
+    color: brown;
+    font-size: 18px;
+}
+
+#email:hover {
+    color: rgb(214, 8, 8);
+    font-size: 18px;
+}
+
+#wppcont:hover {
+    color: green;
+    font-size: 18px;
+}
+
+/*mudanças*/
+@keyframes mymove {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
